@@ -1,0 +1,34 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environnements virtuels
+.venv/
+venv/
+env/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Documents et fichiers privés
+storage/uploads/*
+!storage/uploads/.gitkeep
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# IDE et système
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
