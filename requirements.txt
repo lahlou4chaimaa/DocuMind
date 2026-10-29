@@ -7,8 +7,3 @@ alembic>=1.14,<2.0
 python-multipart>=0.0.20,<1.0
 pytest>=8.3,<9.0
 httpx>=0.28,<1.0
-
-PyMuPDF>=1.25,<2.0
-pgvector>=0.3,<1.0
-ollama>=0.4,<1.0
-

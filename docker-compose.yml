@@ -1,0 +1,21 @@
+services:
+  documind-db:
+    image: pgvector/pgvector:pg17
+    container_name: documind-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: documind_db
+      POSTGRES_USER: documind_user
+      POSTGRES_PASSWORD: documind_dev_password
+    ports:
+      - "5433:5432"
+    volumes:
+      - documind_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U documind_user -d documind_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  documind_postgres_data:
